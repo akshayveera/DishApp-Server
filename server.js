@@ -6,6 +6,14 @@ const app = express();
 // import db
 const db = require("./db");
 
+// import and allow cors
+const cors = require("cors");
+app.use(cors(
+    {
+        origin: 'https://dishapp-server.onrender.com';
+    }
+));
+
 // import and use body-parser
 const bodyParser = require("body-parser");
 app.use(bodyParser.json());
