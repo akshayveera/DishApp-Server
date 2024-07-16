@@ -10,7 +10,7 @@ const db = require("./db");
 const cors = require("cors");
 app.use(cors(
     {
-        origin: 'https://dishapp-server.onrender.com';
+        origin: 'https://dishapp-server.onrender.com'
     }
 ));
 
