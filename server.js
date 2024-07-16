@@ -1,0 +1,21 @@
+
+// import express
+const express = require("express");
+const app = express();
+
+// import db
+const db = require("./db");
+
+// import and use body-parser
+const bodyParser = require("body-parser");
+app.use(bodyParser.json());
+
+// import and use endpoints
+const dishRoutes = require("./routes/dishRoutes");
+app.use('/', dishRoutes);
+
+// listen to the some port
+app.listen(3000, ()=>{
+    console.log("server is live at port no. 3000");
+})
+
